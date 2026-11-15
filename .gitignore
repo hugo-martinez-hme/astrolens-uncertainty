@@ -9,9 +9,9 @@ __pycache__/
 htmlcov/
 
 # Datos científicos, modelos y artefactos de entrenamiento
-data/
-checkpoints/
-results/
+/data/
+/checkpoints/
+/results/
 *.fits
 *.fit
 *.h5
