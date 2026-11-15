@@ -147,7 +147,9 @@ def simulate_lens_image(
 
     if class_id == 0:
         # Smooth dark matter halo (no substructure)
-        ring_flux = arc_amp * azimuthal_mod * np.exp(-0.5 * ((r_ring - r_einstein) / arc_width) ** 2)
+        ring_flux = (
+            arc_amp * azimuthal_mod * np.exp(-0.5 * ((r_ring - r_einstein) / arc_width) ** 2)
+        )
         flux_rate += ring_flux
 
     elif class_id == 1:
