@@ -1,0 +1,26 @@
+# Entornos virtuales y cachés Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Datos científicos, modelos y artefactos de entrenamiento
+data/
+checkpoints/
+results/
+*.fits
+*.fit
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+
+# Editor y SO
+.vscode/
+.idea/
+.DS_Store
