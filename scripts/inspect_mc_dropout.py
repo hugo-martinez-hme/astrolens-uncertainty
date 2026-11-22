@@ -9,6 +9,7 @@ import torch
 from astrolens.data.dataset import FitsLensDataset
 from astrolens.data.transforms import ArcsinhStretch
 from astrolens.models import build_model
+from astrolens.uncertainty.mc_dropout import sample_probabilities
 
 
 @torch.inference_mode()
@@ -42,10 +43,8 @@ def main() -> None:
     deterministic = model(batch).softmax(dim=-1)[0]
 
     torch.manual_seed(42)
-    model.set_mc_dropout(True)
     passes = 20
-    samples = torch.stack([model(batch).softmax(dim=-1)[0] for _ in range(passes)])
-    model.set_mc_dropout(False)
+    samples = sample_probabilities(model, batch, passes=passes)[:, 0, :]
 
     mean = samples.mean(dim=0)
     std = samples.std(dim=0, correction=0)
