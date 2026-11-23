@@ -9,6 +9,7 @@ import torch
 from astrolens.data.dataset import FitsLensDataset
 from astrolens.data.transforms import ArcsinhStretch
 from astrolens.models import build_model
+from astrolens.uncertainty.entropy import summarize_entropy
 from astrolens.uncertainty.mc_dropout import sample_probabilities
 
 
@@ -44,7 +45,9 @@ def main() -> None:
 
     torch.manual_seed(42)
     passes = 20
-    samples = sample_probabilities(model, batch, passes=passes)[:, 0, :]
+    samples = sample_probabilities(model, batch, passes=passes)
+    entropy = summarize_entropy(samples)
+    samples = samples[:, 0, :]
 
     mean = samples.mean(dim=0)
     std = samples.std(dim=0, correction=0)
@@ -54,6 +57,9 @@ def main() -> None:
     print(f"True class: {classes[label]}")
     print(f"Deterministic prediction: {classes[deterministic.argmax().item()]}")
     print(f"MC mean prediction: {classes[mean.argmax().item()]}")
+    print(f"Predictive entropy (nats): {entropy.predictive_entropy.item():.6f}")
+    print(f"Expected entropy (nats): {entropy.expected_entropy.item():.6f}")
+    print(f"Mutual information (nats): {entropy.mutual_information.item():.6f}")
     print(f"{'Class':<14} {'Det.':>8} {'MC mean':>8} {'MC std':>8} {'Votes':>7}")
     for i, name in enumerate(classes):
         print(
