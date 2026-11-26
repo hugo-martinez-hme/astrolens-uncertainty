@@ -1,5 +1,6 @@
 """Plot selective accuracy from the seed-42 WSL AstroResNet predictions."""
 
+import argparse
 import csv
 from pathlib import Path
 
@@ -8,10 +9,12 @@ from matplotlib.ticker import PercentFormatter
 
 
 def main() -> None:
-    run_dir = Path("results/baseline_wsl_42")
-    csv_path = run_dir / "resnet_mc20_seed42_test.csv"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--csv", type=Path, required=True, help="Per-image prediction CSV")
+    parser.add_argument("--output", type=Path, required=True, help="Output figure path")
+    args = parser.parse_args()
 
-    with csv_path.open(newline="", encoding="utf-8") as stream:
+    with args.csv.open(newline="", encoding="utf-8") as stream:
         rows = list(csv.DictReader(stream))
 
     total = len(rows)
@@ -61,10 +64,9 @@ def main() -> None:
     ax.legend(fontsize=9)
     fig.tight_layout()
 
-    output = run_dir / "resnet_mc20_seed42_selective_accuracy.png"
-    fig.savefig(output, dpi=180)
+    fig.savefig(args.output, dpi=180)
     plt.close(fig)
-    print(f"Saved {output}")
+    print(f"Saved {args.output}")
 
 
 if __name__ == "__main__":
