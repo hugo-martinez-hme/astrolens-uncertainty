@@ -44,3 +44,34 @@ subhalos. These are single-seed results on this generator, with only ten test
 images per class. They establish a reproducible baseline for studying class
 confusion. Performance on observed lenses and out-of-distribution anomalies
 remains unmeasured. See the [reference report](docs/benchmarks/reference42.json).
+
+### Can AstroResNet identify its own errors?
+
+We ranked 30 held-out synthetic lenses for review using deterministic confidence,
+MC predictive entropy and estimated mutual information. The predicted class
+was held fixed across all three rankings. MC Dropout used 20 passes.
+
+This figure uses the seed-42 WSL checkpoint selected at epoch 9. It classified
+20/30 images correctly. The reference run above selected epoch 10 and reached
+22/30 on the same test images.
+
+![Selective accuracy versus coverage for three review criteria on 30 synthetic lenses](docs/figures/resnet_mc20_seed42_selective_accuracy.png)
+
+| Review criterion | Errors found in 6 reviews | Correct among 24 accepted |
+| --- | ---: | ---: |
+| Lowest deterministic confidence | 4/10 | 18/24 (75.0%) |
+| Highest MC predictive entropy | 3/10 | 17/24 (70.8%) |
+| Highest estimated mutual information | 1/10 | 15/24 (62.5%) |
+
+At 80% coverage, deterministic confidence found one more error than predictive
+entropy. All ten errors in this run were `smooth` lenses classified as
+`cdm_subhalo`, so the result is sensitive to which classes each criterion
+sends for review. The ranking also changes with coverage.
+
+To redraw the figure from the published per-image predictions, run:
+
+```bash
+MPLBACKEND=Agg python scripts/plot_selective_accuracy.py \
+  --csv docs/benchmarks/resnet_mc20_seed42_test.csv \
+  --output selective_accuracy.png
+```
