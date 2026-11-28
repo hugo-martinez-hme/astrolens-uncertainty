@@ -32,10 +32,11 @@ def sanitize_byte_order(array: np.ndarray) -> np.ndarray:
 
 
 class FitsLensDataset(Dataset[tuple[torch.Tensor, int]]):
-    """PyTorch Dataset for synthetic or real (Euclid/HST) strong lensing FITS cutouts.
+    """PyTorch Dataset for strong lensing FITS cutouts.
 
     Loads 2D (H, W) or 3D (C, H, W) science arrays from FITS files, normalizes byte order
     to native float32, validates finite flux values, and applies modular PyTorch transforms.
+    The benchmark uses synthetic images; real survey compatibility has not been validated.
     """
 
     def __init__(

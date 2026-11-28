@@ -1,0 +1,1122 @@
+{
+  "seed": 42,
+  "epochs": 10,
+  "batch_size": 16,
+  "classes": [
+    "smooth",
+    "cdm_subhalo",
+    "anomaly"
+  ],
+  "python": "3.14.10",
+  "versions": {
+    "torch": "2.15.0",
+    "astropy": "8.0.2",
+    "numpy": "2.5.4"
+  },
+  "split": {
+    "train": [
+      {
+        "path": "lens_smooth_0043.fits",
+        "sha256": "23b6d1212dc3e7d971ba45cebae78246d5af969657dfc7a828c8d286e38ee6e4"
+      },
+      {
+        "path": "lens_smooth_0018.fits",
+        "sha256": "e5584a4f61029920464a988514f123b93e027a2929b9cca4a75614d4fde5fc0b"
+      },
+      {
+        "path": "lens_smooth_0033.fits",
+        "sha256": "6e7a38857efa563e4820e5f6f42efea3a5846a683082212070950e30ada495cf"
+      },
+      {
+        "path": "lens_smooth_0048.fits",
+        "sha256": "fd9af97b8b78440260b6020ef2be9971cdbb38a521a20f6350a6d7f4c29e5b18"
+      },
+      {
+        "path": "lens_smooth_0041.fits",
+        "sha256": "132b7614dffba83c14a4061bacc162ffb9225b9b765fa75c65db094155020a89"
+      },
+      {
+        "path": "lens_smooth_0030.fits",
+        "sha256": "d89f6044de90de5836a61058d066e7395fee78407c53aa559a502b3e95ff6885"
+      },
+      {
+        "path": "lens_smooth_0028.fits",
+        "sha256": "d9296a98b10fbaed78d4f640e1f0bc3e5b9023970b450630a60eaaeb2d9f1a7d"
+      },
+      {
+        "path": "lens_smooth_0020.fits",
+        "sha256": "36999fc3ee78ce5d567b8b79ad7a41a6c51cf653e495c3b4a74e377ad26e7697"
+      },
+      {
+        "path": "lens_smooth_0022.fits",
+        "sha256": "0d7161bb77a3972336b3715633a84385bfda59ded2f5c7aedbd907ba0a2b83cf"
+      },
+      {
+        "path": "lens_smooth_0042.fits",
+        "sha256": "293a66b270d33c1982ff37692e06212d364071860ddd1598b7439b75ab4f6800"
+      },
+      {
+        "path": "lens_smooth_0046.fits",
+        "sha256": "f5d7f29b6cf01e54073a4b25a917a16f97fe0ca52935e16ab656856b9d8ba63d"
+      },
+      {
+        "path": "lens_smooth_0036.fits",
+        "sha256": "74de2f81268dee20ec460f6eb899bdb539f04bbfd21f1b3dd9787d4c9778de0f"
+      },
+      {
+        "path": "lens_smooth_0032.fits",
+        "sha256": "2b3521249fe5ad3c790b3c532bc3cb2ab3d72d40acde14b17fdc9bb730907766"
+      },
+      {
+        "path": "lens_smooth_0044.fits",
+        "sha256": "f5a9092ef6c95803906b721ea0ff66e3d2af5a0681c34e730e7d72e4460957cd"
+      },
+      {
+        "path": "lens_smooth_0013.fits",
+        "sha256": "9c7087975b70781e2a8b2216596693fca2867e277cda446ab13fab50b5caec5d"
+      },
+      {
+        "path": "lens_smooth_0049.fits",
+        "sha256": "d26cbe1c0e0314f15b224d62775be41686fb37a9db96cb99298a6473b90cf70a"
+      },
+      {
+        "path": "lens_smooth_0047.fits",
+        "sha256": "335a2c41e77ec3befe109198b091d42d63160dc17cd2d84de23565c73e2efa2e"
+      },
+      {
+        "path": "lens_smooth_0002.fits",
+        "sha256": "caf9d045c6bfce9cf0ac8e8a67b0216531e19191b51e0966c38f2b237ac12e1d"
+      },
+      {
+        "path": "lens_smooth_0027.fits",
+        "sha256": "72714dcc2dc3b2c6828cfbfa49ca9253a2c442063e4d7002e2cd156b0c24b493"
+      },
+      {
+        "path": "lens_smooth_0037.fits",
+        "sha256": "3b3aa026ae3fbf5904818be3059ca47fd44f4e5eba797ff6cf5a1bbbb53957d9"
+      },
+      {
+        "path": "lens_smooth_0005.fits",
+        "sha256": "34599c377add9a66d82fd99ea6f50bb7f4c16bb80c1c28812b03596710f32951"
+      },
+      {
+        "path": "lens_smooth_0034.fits",
+        "sha256": "bafdb6e9af4e7d6d9ad53a577ad203de0398f4554a0823a4a83cda62af105cf5"
+      },
+      {
+        "path": "lens_smooth_0006.fits",
+        "sha256": "5fccf8f86cbd36d35fba2305dce1cb168f110533f1853bbcdd6ed620bd6bb054"
+      },
+      {
+        "path": "lens_smooth_0008.fits",
+        "sha256": "f96883611d765bfd1e0e03955f582d5e329d46f71125b2d078f0951a04265cd8"
+      },
+      {
+        "path": "lens_smooth_0014.fits",
+        "sha256": "993d10f244e9e60dd10cab655e07615e02f1387b01fdb4bf35b0e93d49fea71d"
+      },
+      {
+        "path": "lens_smooth_0015.fits",
+        "sha256": "e32df88562d2e9cad2c0ae5756b3d3aba834c6303cdd28b68d751d586e3f1f7d"
+      },
+      {
+        "path": "lens_smooth_0017.fits",
+        "sha256": "928fcf86ee498a97653af98cbfa4cff0ad3f00d276bca5385b8cddb70fc15937"
+      },
+      {
+        "path": "lens_smooth_0001.fits",
+        "sha256": "e1eed6a792d24c82e50977b879e475734656b1549d3661b4fcba93d43e4fae0c"
+      },
+      {
+        "path": "lens_smooth_0007.fits",
+        "sha256": "8a7b0886e5b127058d1b69bfa60297268b9c092b78b50cf219a81906348da278"
+      },
+      {
+        "path": "lens_smooth_0040.fits",
+        "sha256": "15c970f7269fad4c1c1f7144c704511f12a6820ff6a7e782fec2bd745eafeed3"
+      },
+      {
+        "path": "lens_cdm_subhalo_0030.fits",
+        "sha256": "c6ff2483d95b9484c46d82580a28f6fbb0233f43bfcf7c6178265c5b645cdb06"
+      },
+      {
+        "path": "lens_cdm_subhalo_0021.fits",
+        "sha256": "f7e05c7567152efca4ef8f4226a5886b427314f5c785791e29d7bf2887ed572f"
+      },
+      {
+        "path": "lens_cdm_subhalo_0032.fits",
+        "sha256": "202ecdf209e74f7338996e62e316f35bde3c546c0a4803b87de8d88cd9f92a25"
+      },
+      {
+        "path": "lens_cdm_subhalo_0031.fits",
+        "sha256": "4b017f8e7f97e8e8e28dd643a8fbe609b56e090c2b8265c479c144c70ae16467"
+      },
+      {
+        "path": "lens_cdm_subhalo_0027.fits",
+        "sha256": "efc2aad08cac7a8c5d32a9dcd41b7a3f6773c1f189d07d8568947245581cb281"
+      },
+      {
+        "path": "lens_cdm_subhalo_0049.fits",
+        "sha256": "480c5773217e05afb5e7500d6b89f166e55fa7234f41207b985445ffc875b706"
+      },
+      {
+        "path": "lens_cdm_subhalo_0011.fits",
+        "sha256": "bb27950881959aecd1659b148e23c92093fc974606e0a42a2f08a7150d4c9e73"
+      },
+      {
+        "path": "lens_cdm_subhalo_0026.fits",
+        "sha256": "06204d0051fed437e5335130e2943d908895ad764a3a19a18e46f2319717fcb9"
+      },
+      {
+        "path": "lens_cdm_subhalo_0020.fits",
+        "sha256": "adef71fa76e7e32d5fd108f8519dd0e895c7aa24bacbdef83e689d26198ae411"
+      },
+      {
+        "path": "lens_cdm_subhalo_0033.fits",
+        "sha256": "4f0cb95a4413f59a7ce0410ee46efc7ab3d057b50437db8c6c3151e0c4d4f5d3"
+      },
+      {
+        "path": "lens_cdm_subhalo_0008.fits",
+        "sha256": "d91d8db863888dd3a4044fa99d7b508d2958dae62d2639f4d936e34a2f0ab5f0"
+      },
+      {
+        "path": "lens_cdm_subhalo_0047.fits",
+        "sha256": "d6c659fee949a0f199a46733668e8232d334c440f37537e5e5aaa862041016f4"
+      },
+      {
+        "path": "lens_cdm_subhalo_0006.fits",
+        "sha256": "2f4aaf1f98f2551cbc0f1ccceb36ddf75b155b5995e9a28f1ca9ff32b87f60d6"
+      },
+      {
+        "path": "lens_cdm_subhalo_0043.fits",
+        "sha256": "7fd5348d2d61c754bed64a055d5cffa13245000704925a4b0372dcee937bf165"
+      },
+      {
+        "path": "lens_cdm_subhalo_0046.fits",
+        "sha256": "637470ee36045fefb1ca563042b82f7eb51ce022f529c44d19277c33b7918ce0"
+      },
+      {
+        "path": "lens_cdm_subhalo_0044.fits",
+        "sha256": "3cc33d1073b5fda3a74ba98aa83131de14cd6b80dc76c4489ad66cbb50d8bae1"
+      },
+      {
+        "path": "lens_cdm_subhalo_0014.fits",
+        "sha256": "c3b319a11514db9d05dee6f41a8ab912f153257bdc18a3d9a0c5421e1d3f6d37"
+      },
+      {
+        "path": "lens_cdm_subhalo_0002.fits",
+        "sha256": "262650c85ebd2fb4015414e047a6ef86de28996bf182f605e0abe79915c4019a"
+      },
+      {
+        "path": "lens_cdm_subhalo_0004.fits",
+        "sha256": "c338d925997b360c0e8407a8c0c772c87c3da48f97a6145b83d464380c9b27cf"
+      },
+      {
+        "path": "lens_cdm_subhalo_0012.fits",
+        "sha256": "ff6bbe34b4a745824d14a1970b93e3fcd24e715bc2702e13482a609ab85a0844"
+      },
+      {
+        "path": "lens_cdm_subhalo_0036.fits",
+        "sha256": "9a5650b1ce54740634c0801e1a7de6887eb79c881814930906a3e86a2cab8405"
+      },
+      {
+        "path": "lens_cdm_subhalo_0023.fits",
+        "sha256": "8a016ea4d2f3057396a7d78114bfcd07146398a77aeb64560c5d01be3d84d38e"
+      },
+      {
+        "path": "lens_cdm_subhalo_0039.fits",
+        "sha256": "2b3c94b2f5bf58de44bfee446a8807de29a25ea459c8f5c33831c9044a498b3e"
+      },
+      {
+        "path": "lens_cdm_subhalo_0040.fits",
+        "sha256": "1676927c53f90fea3b71e86bf6ed3088fa1d535873badf24503f7ebc99b1d2e6"
+      },
+      {
+        "path": "lens_cdm_subhalo_0018.fits",
+        "sha256": "2c9a0f23adf71c7fe0e0e08e81754373780985b9c7f8792b7bd9f808f92cd525"
+      },
+      {
+        "path": "lens_cdm_subhalo_0035.fits",
+        "sha256": "ef1db409f0e157a2bedbcd8dd591bf9e1a454e24bb27c42d1a15b0224cda4343"
+      },
+      {
+        "path": "lens_cdm_subhalo_0005.fits",
+        "sha256": "d2df8e77d33130b26a69f39f8ab2efebb2445f38acae5dadb19339a55da14876"
+      },
+      {
+        "path": "lens_cdm_subhalo_0024.fits",
+        "sha256": "11442a068c793e4de044530f2cfd8f24c31426c3a289b412ea2a0511c25a4317"
+      },
+      {
+        "path": "lens_cdm_subhalo_0007.fits",
+        "sha256": "205daa2bce899907593524ca4210217fb3503cd76b77e819128d18b77c8dda43"
+      },
+      {
+        "path": "lens_cdm_subhalo_0034.fits",
+        "sha256": "95521e51d999dcd39413ae91a295b7754234f2479e1936e8b34ae2f0f711b9ed"
+      },
+      {
+        "path": "lens_anomaly_0046.fits",
+        "sha256": "73acea50121a3b5a37550de28e398dd4af79f5376c80152a2f6edc645114a323"
+      },
+      {
+        "path": "lens_anomaly_0028.fits",
+        "sha256": "74a235c076bf51bd636cff9cd74745696dcb9c3928fbea72383f714b5aeadeb8"
+      },
+      {
+        "path": "lens_anomaly_0003.fits",
+        "sha256": "f4bbc31188e16e41db328817f6a714b3856524227ea083802324b51f9db5d34b"
+      },
+      {
+        "path": "lens_anomaly_0001.fits",
+        "sha256": "99f06a7869426b792ac3a6c050074fe1495466b9bcbffe14ff5066180d107f0e"
+      },
+      {
+        "path": "lens_anomaly_0024.fits",
+        "sha256": "e8f0fe85ee83d5e7d3799370056ac0f9254f562cdf53621b4e79e7290a59170e"
+      },
+      {
+        "path": "lens_anomaly_0002.fits",
+        "sha256": "7a5a03f59f4a0c93ff89bb124ac3f8cbbc0f029b7c935aacf8a0869f40c4fa39"
+      },
+      {
+        "path": "lens_anomaly_0048.fits",
+        "sha256": "eb1efbfcafaaf1d75762c09160035264abf5fedc1d5626a325bc3cd4d33a21dd"
+      },
+      {
+        "path": "lens_anomaly_0033.fits",
+        "sha256": "38b546fe33bfef2fc44ea326fae99eb9d643add104fa84bdb2a36feca9f87697"
+      },
+      {
+        "path": "lens_anomaly_0004.fits",
+        "sha256": "b08e5594fd0c39aef1ebf1e7c05ba4dc8a62eaa582ecff045291751c7bdfb236"
+      },
+      {
+        "path": "lens_anomaly_0007.fits",
+        "sha256": "8cecfc601526776b5751dcd873bf01fbb87ca3f6b7d8eff90e46eb161c4c3af2"
+      },
+      {
+        "path": "lens_anomaly_0011.fits",
+        "sha256": "5a894cc73eb6e91d5329036d48be3038e0ca171994e075c4abadf7f836cd1618"
+      },
+      {
+        "path": "lens_anomaly_0042.fits",
+        "sha256": "8c4762a0608fbfa03b53e1e636dd298dfdd30b902e294c434c1c99c394976a7a"
+      },
+      {
+        "path": "lens_anomaly_0027.fits",
+        "sha256": "355d7fb5d763f8e0c5454364f079027510a3061b161b9f89d305bdce281fa209"
+      },
+      {
+        "path": "lens_anomaly_0038.fits",
+        "sha256": "9c563b38309c4dcfe5393058f2645cba3023f73254daac537d919e1f8038208b"
+      },
+      {
+        "path": "lens_anomaly_0034.fits",
+        "sha256": "80c0b1a1ee316a4b24cdf8c93a09b0ad52a5d9e49ab8dbdd3ed068e463704ff5"
+      },
+      {
+        "path": "lens_anomaly_0035.fits",
+        "sha256": "e8ceafa8bf1e996ee481b1f79e58be5ceaedf6a09d8988f35ff5aa06a4d2a5f1"
+      },
+      {
+        "path": "lens_anomaly_0015.fits",
+        "sha256": "200d7fc99f4432acbdc4e927e987c20af956a7e553bbad6e45de099e5699748f"
+      },
+      {
+        "path": "lens_anomaly_0008.fits",
+        "sha256": "336a53a2dad80176a5a00e78fed81eded6c48e0bd89784ce2934acaa8150c911"
+      },
+      {
+        "path": "lens_anomaly_0016.fits",
+        "sha256": "377f3061e0da02419db6d43130bb3814b72d13c6358d01f1fb3a25cb2dcb9300"
+      },
+      {
+        "path": "lens_anomaly_0009.fits",
+        "sha256": "da3727a259e4dedee0445a1e4a7d14e45416b0e64c0c51bc4abd8d4480dd8f0d"
+      },
+      {
+        "path": "lens_anomaly_0029.fits",
+        "sha256": "429bad3652462fbcc1f0598199a081b510da3f4068dda92391a3e0be5bfcb54f"
+      },
+      {
+        "path": "lens_anomaly_0044.fits",
+        "sha256": "d6e156ec08f250c95c160e49b6fa4662421035dc94bf924fc3e7537f75be14ed"
+      },
+      {
+        "path": "lens_anomaly_0025.fits",
+        "sha256": "dd238b240a88236e86d2988dd74da86146302e122ec54a8075bf6b64d5c8ca60"
+      },
+      {
+        "path": "lens_anomaly_0031.fits",
+        "sha256": "5bc26eab603e5666e0a142038d250cf0225cdcce932c3b90165b6482e0ea6a8c"
+      },
+      {
+        "path": "lens_anomaly_0041.fits",
+        "sha256": "b57c8df022898a8a26c71a539f9513307abb9f9903e014c8ef343844004ce62a"
+      },
+      {
+        "path": "lens_anomaly_0049.fits",
+        "sha256": "5d8687c2bbec252a374ea447f312a945f18cb785b3ad03bf8c38845b7195f7ea"
+      },
+      {
+        "path": "lens_anomaly_0020.fits",
+        "sha256": "0da1a5d5b63647f2738e7f7f9df89b67d7ae9cfd29c8aa971e40e09db61b73c5"
+      },
+      {
+        "path": "lens_anomaly_0045.fits",
+        "sha256": "5e841fa74bada5e4c8e661b49b1883e5a9281f972d70434306557f8716e6b931"
+      },
+      {
+        "path": "lens_anomaly_0036.fits",
+        "sha256": "9579f082246be9bbad5ecdf9837480760230bc245add349e1b3c52abeb81d655"
+      },
+      {
+        "path": "lens_anomaly_0013.fits",
+        "sha256": "a8cfb858dc8474bf10bcc3e58b6a163d19da6173944914ddfd6b8fd64576ab49"
+      }
+    ],
+    "validation": [
+      {
+        "path": "lens_smooth_0031.fits",
+        "sha256": "5e63833e9102350790ea7601971bd28701636a460a7d0229e496fc646a6819ba"
+      },
+      {
+        "path": "lens_smooth_0021.fits",
+        "sha256": "d7adfee8335b7d919d7cd7a18c65ea5118de38c6ccd5ad81a232746bbe90c123"
+      },
+      {
+        "path": "lens_smooth_0012.fits",
+        "sha256": "55a9ce411d6a0e6930d812eb75c58394a38550e75f2f3dbd369718e87bdb474c"
+      },
+      {
+        "path": "lens_smooth_0003.fits",
+        "sha256": "836c69cfc749e68df839f4220797afefacde230acc90f07ae6af416044020ef3"
+      },
+      {
+        "path": "lens_smooth_0039.fits",
+        "sha256": "b03fa29f99460933854ee757548cbb82b923adccdb8f1108b1c36c8dbabdd5a4"
+      },
+      {
+        "path": "lens_smooth_0038.fits",
+        "sha256": "15ef8ec919b539c42d5fb97799af8ee73aec491690d12f7747f194ad6d50fdfe"
+      },
+      {
+        "path": "lens_smooth_0010.fits",
+        "sha256": "d711b5a1cdf7acef95dff3a4d5e2c8b9ff3014a4a61486f487ecd704bdb9bb89"
+      },
+      {
+        "path": "lens_smooth_0024.fits",
+        "sha256": "abb9067c9ce57bd4a9fc512e43230592a712c26e46cd9889b2028b827b11c85a"
+      },
+      {
+        "path": "lens_smooth_0035.fits",
+        "sha256": "de5fe34cb413bdc1709d701e86b05a7c6836e695641c0c14fc8acd360cb77df4"
+      },
+      {
+        "path": "lens_smooth_0000.fits",
+        "sha256": "001f6e65e90f8c94768dc3563a8ac980fe100275a7ed72a93f3cf55d163d3deb"
+      },
+      {
+        "path": "lens_cdm_subhalo_0028.fits",
+        "sha256": "c018c1ab84f7b7710f04046d15e798e8e3809bed24c0bec181ea24517bb9915a"
+      },
+      {
+        "path": "lens_cdm_subhalo_0010.fits",
+        "sha256": "ca097ed0a47dcc3aa6e427dcc1413619b468574351e4a5f91b2e1254cfa934ff"
+      },
+      {
+        "path": "lens_cdm_subhalo_0038.fits",
+        "sha256": "630daa71e276def0942658818345f0225cd132519023834c09fdb0f9880dde94"
+      },
+      {
+        "path": "lens_cdm_subhalo_0022.fits",
+        "sha256": "59d40a25add64cadbfe1e2b6e6c9c2cb17aa0bb64ca03e017d4d30694cdfc829"
+      },
+      {
+        "path": "lens_cdm_subhalo_0016.fits",
+        "sha256": "f662077ad43167ea27d139e3800958e4789102b802cd2ed9ce226fc0f1fbde89"
+      },
+      {
+        "path": "lens_cdm_subhalo_0045.fits",
+        "sha256": "2045c11754cf9b8399cbc7578fc0baae1391817c952a5b18b9d2bc6c5750f4fa"
+      },
+      {
+        "path": "lens_cdm_subhalo_0048.fits",
+        "sha256": "6f79a514d260c5fa97f78ba67d656b0dccedfec84d0115440e41d383f4eb66da"
+      },
+      {
+        "path": "lens_cdm_subhalo_0017.fits",
+        "sha256": "d798b8dbbeefa9f4f465edc877ccee3643af708efb8fd3326df7bad46838c6bf"
+      },
+      {
+        "path": "lens_cdm_subhalo_0025.fits",
+        "sha256": "6eccb1ab86d04b2315c6cc46d3b1912394229616341399ea99e36e741f6d2968"
+      },
+      {
+        "path": "lens_cdm_subhalo_0037.fits",
+        "sha256": "b58fd860a19cfa156cf1d2d73cd7849204b1a85591b6db6e2c273743f54c6e66"
+      },
+      {
+        "path": "lens_anomaly_0026.fits",
+        "sha256": "11eab94f4a7f7a395b962425fd236a6d8c4e94b4143d50412b7666e34c0ad66b"
+      },
+      {
+        "path": "lens_anomaly_0021.fits",
+        "sha256": "69b9708e2bbce7dd22da9db8569820acfca18c1317ee675284add432256759eb"
+      },
+      {
+        "path": "lens_anomaly_0037.fits",
+        "sha256": "60800d017d016644870283153bb6ccf33e83cc1d709eb8d2ecd6c55d07180dae"
+      },
+      {
+        "path": "lens_anomaly_0040.fits",
+        "sha256": "1acd185e15721bb604afb91aad10661bf7519802652ec53c9ca908998abd41ed"
+      },
+      {
+        "path": "lens_anomaly_0039.fits",
+        "sha256": "c431d880c399def1b504a7fdad4d50889829065474ea202be93704d2f7e1b8b2"
+      },
+      {
+        "path": "lens_anomaly_0032.fits",
+        "sha256": "891834790086db15c4d46a3c86e27a6800246a1deb6eb9e1bdc21200815873c1"
+      },
+      {
+        "path": "lens_anomaly_0012.fits",
+        "sha256": "24efe11c406f86d68abbabbd7cbc09e02d18015117bdd682321dcf03612cb762"
+      },
+      {
+        "path": "lens_anomaly_0043.fits",
+        "sha256": "2e15ab817a15a9b07b36d13137d13e272840bb23afed6685ff1bb7db1b7ff197"
+      },
+      {
+        "path": "lens_anomaly_0047.fits",
+        "sha256": "2e9f7bc6b2bf7225c42433957ac4b927a06a59e7aeccb6f1e96a632046d9a734"
+      },
+      {
+        "path": "lens_anomaly_0005.fits",
+        "sha256": "d436e2fbdc9e320642f24c5e0c68380d554247599b83f703ce8d8fa0e936b8e4"
+      }
+    ],
+    "test": [
+      {
+        "path": "lens_smooth_0025.fits",
+        "sha256": "56bc38643e8147773ffc301198f2fd0dd454b336d184f587ce73f033117de575"
+      },
+      {
+        "path": "lens_smooth_0023.fits",
+        "sha256": "f606d2d73fb9a49da62b07442f13a87b1a7d235ca87bfae40245abde74eb0b9b"
+      },
+      {
+        "path": "lens_smooth_0019.fits",
+        "sha256": "ecd1d9190c4571fc1f04606217a298bb0781457d7c0138d018e7e69e1fc16420"
+      },
+      {
+        "path": "lens_smooth_0011.fits",
+        "sha256": "ba02d3cb64385513347e982f08c648cb407f9d51ba667c270b2a0677239185d9"
+      },
+      {
+        "path": "lens_smooth_0004.fits",
+        "sha256": "5e34e45bb0be3e699368059653c9f4c43aa66d0a90fd7789ea1cc57c881ee0ce"
+      },
+      {
+        "path": "lens_smooth_0045.fits",
+        "sha256": "4b532b5c18cbe73d7e35a6c3a1cd9b095c80d88351d13b7ebe27cc8d98b89961"
+      },
+      {
+        "path": "lens_smooth_0026.fits",
+        "sha256": "fc877d8a2c4fda796a3127baa053f28664760effea2d9cd3f0e713eeba89be5a"
+      },
+      {
+        "path": "lens_smooth_0009.fits",
+        "sha256": "bc30574d2881c60763f0b5f95c4d9fa46df1cb4cc9028155a55c9c29607f5c12"
+      },
+      {
+        "path": "lens_smooth_0029.fits",
+        "sha256": "553b82ee52db768d0d5d3afbd1b5b062b2db37a9fd10fb9966dd3ed957665163"
+      },
+      {
+        "path": "lens_smooth_0016.fits",
+        "sha256": "220291bb25e1ae5dabb1e101ad6474a949eaef4fafb2d2daa38027d54e9426d6"
+      },
+      {
+        "path": "lens_cdm_subhalo_0042.fits",
+        "sha256": "2e2be9f605a0bcbef68c1b06db0bfa74d57c79ded4854b358a28b525226957be"
+      },
+      {
+        "path": "lens_cdm_subhalo_0041.fits",
+        "sha256": "d7b0f26befbbec8e8f131419af2d74854e4da37e8e99799b86f95bf2b2ed29c5"
+      },
+      {
+        "path": "lens_cdm_subhalo_0013.fits",
+        "sha256": "984564f0f3f2f89dee8332ab6c7d428389bb9f2fb4185a2c65dc335e063139c4"
+      },
+      {
+        "path": "lens_cdm_subhalo_0009.fits",
+        "sha256": "a11dafddb8c3957259de4c39636e419fffdfcc762d3d0d060b7ab3350c71ebdb"
+      },
+      {
+        "path": "lens_cdm_subhalo_0019.fits",
+        "sha256": "25e5106556d0ca5de2ca35ecdcf0e5577f8c0ad10224cbdcddd8bd7a9e45ebfc"
+      },
+      {
+        "path": "lens_cdm_subhalo_0029.fits",
+        "sha256": "6209a6bf2447fc96b013a9011fa4f4e203d7e4a3c21999a375de615529f6ddd0"
+      },
+      {
+        "path": "lens_cdm_subhalo_0001.fits",
+        "sha256": "76827c38811d38d91b4e54541004bb4d41ff5695ae85a4324f49bb22effda73f"
+      },
+      {
+        "path": "lens_cdm_subhalo_0000.fits",
+        "sha256": "4f38f6517593d6fb888c937db9ad50f49bfcc45d45338bf3fb072b621ea24fc9"
+      },
+      {
+        "path": "lens_cdm_subhalo_0015.fits",
+        "sha256": "1e6347988969e15a72616735efeecac5d5f8d934ef2d93d9d4a715e694a31714"
+      },
+      {
+        "path": "lens_cdm_subhalo_0003.fits",
+        "sha256": "46e9b5c3e6a67a3a5e299be6ed3b99d5b61d926db538c364ca1b63deffd07219"
+      },
+      {
+        "path": "lens_anomaly_0022.fits",
+        "sha256": "76500be3d655a9520d1d178951703b766e8861378c08847a47de0c2c09211a2d"
+      },
+      {
+        "path": "lens_anomaly_0018.fits",
+        "sha256": "32cde282da19cdc5150530c88ede8e9bcd4618559daab4a2c2e744c07c963b71"
+      },
+      {
+        "path": "lens_anomaly_0010.fits",
+        "sha256": "047d335d5342bf0effd9c845dc2d54373fa12136a948d910f715ffc80cd93c55"
+      },
+      {
+        "path": "lens_anomaly_0014.fits",
+        "sha256": "ff53de7c2158d45b1ebdab84f9a8edc70fa8f05ac59a1daad748945c939efc90"
+      },
+      {
+        "path": "lens_anomaly_0017.fits",
+        "sha256": "1f91ba50432c99a7e7f47f5cd96bc9c06eceebc83a0f3a1cd419e6788b64c337"
+      },
+      {
+        "path": "lens_anomaly_0019.fits",
+        "sha256": "d695dcee3bf233896891dd91c31f1f4b5986bde680e39583d45a14b57419b98e"
+      },
+      {
+        "path": "lens_anomaly_0006.fits",
+        "sha256": "5870f75fbc68e9b71fd09b9f418f7c900e2de446bccfa858685c8fe647f3e40d"
+      },
+      {
+        "path": "lens_anomaly_0030.fits",
+        "sha256": "6a2fab9852231585272a84fb5bb535cbe783bbb2c4b81c9ac352d003f71afcf6"
+      },
+      {
+        "path": "lens_anomaly_0023.fits",
+        "sha256": "f50a442a92804fb65fbebd302976a613107cedcfe2c1c8bd4c73902847034d1f"
+      },
+      {
+        "path": "lens_anomaly_0000.fits",
+        "sha256": "275de4070f9f0b2af16213113c832b15ca2f950b5d3716793f0b2fd280195721"
+      }
+    ]
+  },
+  "models": {
+    "resnet": {
+      "parameters": 174515,
+      "best_epoch": 9,
+      "validation_by_epoch": [
+        {
+          "nll": 1.0960868835449218,
+          "accuracy": 0.3333333333333333,
+          "macro_f1": 0.1666666716337204,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              0,
+              10
+            ],
+            [
+              0,
+              0,
+              10
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 1.0693967819213868,
+          "accuracy": 0.3333333333333333,
+          "macro_f1": 0.1666666716337204,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              0,
+              10
+            ],
+            [
+              0,
+              0,
+              10
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.8869832674662272,
+          "accuracy": 0.7,
+          "macro_f1": 0.623824417591095,
+          "confusion_true_by_predicted": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              9,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.7868832270304362,
+          "accuracy": 0.6333333333333333,
+          "macro_f1": 0.5308432579040527,
+          "confusion_true_by_predicted": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              9
+            ]
+          ]
+        },
+        {
+          "nll": 0.7226686159769694,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.5473453998565674,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              9,
+              1
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.7642015616099039,
+          "accuracy": 0.5333333333333333,
+          "macro_f1": 0.42307695746421814,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              8,
+              2
+            ],
+            [
+              0,
+              6,
+              4
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.654240083694458,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.5555555820465088,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.6020588080088297,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.5555555820465088,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.549574057261149,
+          "accuracy": 0.6333333333333333,
+          "macro_f1": 0.540229856967926,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              1,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.5626594225565592,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.5555555820465088,
+          "confusion_true_by_predicted": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "test": {
+        "nll": 0.5631440480550131,
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.5555555820465088,
+        "confusion_true_by_predicted": [
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ]
+      }
+    },
+    "lens_vit": {
+      "parameters": 175619,
+      "best_epoch": 7,
+      "validation_by_epoch": [
+        {
+          "nll": 0.9601268450419108,
+          "accuracy": 0.4666666666666667,
+          "macro_f1": 0.37566137313842773,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              6,
+              4
+            ]
+          ]
+        },
+        {
+          "nll": 0.8792041460673015,
+          "accuracy": 0.4666666666666667,
+          "macro_f1": 0.3593073785305023,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              8,
+              2
+            ],
+            [
+              0,
+              4,
+              6
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.8406319300333659,
+          "accuracy": 0.43333333333333335,
+          "macro_f1": 0.3808302879333496,
+          "confusion_true_by_predicted": [
+            [
+              9,
+              1,
+              0
+            ],
+            [
+              9,
+              1,
+              0
+            ],
+            [
+              7,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "nll": 0.8497599124908447,
+          "accuracy": 0.6333333333333333,
+          "macro_f1": 0.5308432579040527,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              1,
+              9
+            ]
+          ]
+        },
+        {
+          "nll": 0.541045085589091,
+          "accuracy": 0.5666666666666667,
+          "macro_f1": 0.4969475269317627,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              9,
+              1
+            ],
+            [
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.8078197161356608,
+          "accuracy": 0.5666666666666667,
+          "macro_f1": 0.476529985666275,
+          "confusion_true_by_predicted": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              7
+            ]
+          ]
+        },
+        {
+          "nll": 0.5119308630625407,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.5555555820465088,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.6051493326822917,
+          "accuracy": 0.6333333333333333,
+          "macro_f1": 0.5308432579040527,
+          "confusion_true_by_predicted": [
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              1,
+              9
+            ]
+          ]
+        },
+        {
+          "nll": 0.518781820933024,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.5555555820465088,
+          "confusion_true_by_predicted": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "nll": 0.5304389874140422,
+          "accuracy": 0.6666666666666666,
+          "macro_f1": 0.6012300848960876,
+          "confusion_true_by_predicted": [
+            [
+              1,
+              9,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ],
+            [
+              1,
+              0,
+              9
+            ]
+          ]
+        }
+      ],
+      "test": {
+        "nll": 0.5947692553202312,
+        "accuracy": 0.6333333333333333,
+        "macro_f1": 0.5243568420410156,
+        "confusion_true_by_predicted": [
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            9,
+            1
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ]
+      }
+    }
+  }
+}
