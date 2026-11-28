@@ -45,33 +45,42 @@ images per class. They establish a reproducible baseline for studying class
 confusion. Performance on observed lenses and out-of-distribution anomalies
 remains unmeasured. See the [reference report](docs/benchmarks/reference42.json).
 
-### Can AstroResNet identify its own errors?
+### Can the models identify their own errors?
 
-We ranked 30 held-out synthetic lenses for review using deterministic confidence,
-MC predictive entropy and estimated mutual information. The predicted class
-was held fixed across all three rankings. MC Dropout used 20 passes.
+We evaluated the WSL checkpoints of AstroResNet and LensViT on the same 30
+synthetic test images, with ten images per class. AstroResNet classified 20/30
+correctly and LensViT classified 19/30 correctly. Both misclassified all ten
+`smooth` lenses as `cdm_subhalo`. LensViT also classified one `cdm_subhalo`
+lens as `anomaly`.
 
-This figure uses the seed-42 WSL checkpoint selected at epoch 9. It classified
-20/30 images correctly. The reference run above selected epoch 10 and reached
-22/30 on the same test images.
+For each model, we kept its deterministic predictions fixed and ranked images
+for review by lowest deterministic confidence, highest MC predictive entropy,
+or highest estimated mutual information. MC Dropout used 20 passes with seed
+42. Each point below corresponds to one additional accepted image.
 
-![Selective accuracy versus coverage for three review criteria on 30 synthetic lenses](docs/figures/resnet_mc20_seed42_selective_accuracy.png)
+![Paired selective accuracy curves for AstroResNet and LensViT on the same 30 test lenses](docs/figures/paired_mc20_seed42_selective_accuracy.png)
 
-| Review criterion | Errors found in 6 reviews | Correct among 24 accepted |
-| --- | ---: | ---: |
-| Lowest deterministic confidence | 4/10 | 18/24 (75.0%) |
-| Highest MC predictive entropy | 3/10 | 17/24 (70.8%) |
-| Highest estimated mutual information | 1/10 | 15/24 (62.5%) |
+| Review criterion | AstroResNet errors found in 6 reviews | AstroResNet correct among 24 accepted | LensViT errors found in 6 reviews | LensViT correct among 24 accepted |
+| --- | ---: | ---: | ---: | ---: |
+| Lowest deterministic confidence | 4/10 | 18/24 | 5/11 | 18/24 |
+| Highest MC predictive entropy | 3/10 | 17/24 | 5/11 | 18/24 |
+| Highest estimated mutual information | 1/10 | 15/24 | 5/11 | 18/24 |
 
-At 80% coverage, deterministic confidence found one more error than predictive
-entropy. All ten errors in this run were `smooth` lenses classified as
-`cdm_subhalo`, so the result is sensitive to which classes each criterion
-sends for review. The ranking also changes with coverage.
+At 80% coverage, deterministic confidence matched the best observed accuracy
+for both models. LensViT's three criteria achieved the same count while
+selecting different lenses: confidence and mutual information shared four of
+their six selections. All three ranked its additional subhalo error 21st for
+review. These results describe one checkpoint per architecture on a single
+synthetic split. Ten of the errors were shared and belonged to the same class.
 
-To redraw the figure from the published per-image predictions, run:
+The WSL AstroResNet checkpoint used here reached 20/30 at epoch 9; the
+reference AstroResNet run reported above reached 22/30 at epoch 10.
+
+To regenerate the comparison from the published per-image predictions:
 
 ```bash
 MPLBACKEND=Agg python scripts/plot_selective_accuracy.py \
   --csv docs/benchmarks/resnet_mc20_seed42_test.csv \
-  --output selective_accuracy.png
+  --vit-csv docs/benchmarks/lens_vit_mc20_seed42_test.csv \
+  --output paired_selective_accuracy.png
 ```
