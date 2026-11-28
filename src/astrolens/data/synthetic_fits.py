@@ -1,10 +1,10 @@
-"""Physics-based synthetic strong gravitational lensing generator in standard FITS format.
+"""Simplified morphological strong gravitational lens generator in standard FITS format.
 
 Simulates 64x64 Euclid-VIS-like cutouts (0.1 arcsec/pixel, EXPTIME=565s, GAIN=3.1 e-/ADU,
-RDNOISE=4.5 e-) across three physically distinct morphological classes:
+RDNOISE=4.5 e-) across three predefined morphological classes:
     0 ('smooth'): Smooth elliptical lens + unperturbed Einstein ring/arc.
     1 ('cdm_subhalo'): Lens + Einstein ring perturbed by localized CDM subhalo kinks/knots.
-    2 ('anomaly'): Rare OOD compound lens (double source-plane Einstein rings + tidal knot).
+    2 ('anomaly'): Compound lens morphology (double rings and asymmetric companion).
 """
 
 from __future__ import annotations
@@ -24,7 +24,7 @@ CLASS_NAMES: tuple[str, str, str] = ("smooth", "cdm_subhalo", "anomaly")
 
 @dataclass(frozen=True)
 class InstrumentConfig:
-    """Detector and optical configuration modeled after Euclid VIS."""
+    """Simplified detector and optical configuration inspired by Euclid VIS."""
 
     image_size: int = 64
     pixel_scale_arcsec: float = 0.1
@@ -39,8 +39,9 @@ def convolve_gaussian_psf(image: np.ndarray, psf_sigma: float) -> np.ndarray:
     r"""Convolve a 2D flux map with a normalized isotropic Gaussian PSF.
 
     Implements :math:`(S * K_{\text{PSF}})_{ij}` in float64 with reflection padding to
-    preserve total photon flux (:math:`\sum K_{\text{PSF}} = 1`) without external SciPy
-    dependencies or FFT wrap-around artifacts.
+    preserve constant fields (:math:`\sum K_{\text{PSF}} = 1`) without external SciPy
+    dependencies or FFT wrap-around artifacts. Reflection boundaries do not guarantee
+    exact conservation of the total flux over a finite cutout.
 
     Args:
         image: 2D array of shape (H, W) in physical rate units (e-/s).
@@ -95,7 +96,7 @@ def simulate_lens_image(
 ) -> tuple[np.ndarray, dict[str, float | int | str]]:
     r"""Simulate a single noisy strong gravitational lensing frame in ADU.
 
-    Physical forward model:
+    Instrumental forward model (applied to a parametrized morphology):
     .. math::
         \mu_{ij} = \tau \left( [S * K_{\text{PSF}}]_{ij} + \lambda_{\text{sky}} \right),
         \quad N_{ij} \sim \text{Poisson}(\mu_{ij}),
@@ -103,7 +104,7 @@ def simulate_lens_image(
 
     Args:
         class_id: Morphological class index (0=smooth, 1=cdm_subhalo, 2=anomaly).
-        rng: NumPy random generator for full reproducibility.
+        rng: NumPy random generator controlling the sampling sequence.
         config: Detector and optical parameters.
 
     Returns:
@@ -191,7 +192,7 @@ def simulate_lens_image(
         flux_rate += ring_flux + knot_flux
 
     else:
-        # Rare OOD Anomaly: Double Source-Plane Einstein Ring + asymmetric tidal perturber
+        # Predefined anomaly morphology: double rings and asymmetric companion
         r_inner = float(rng.uniform(10.0, 12.5))
         r_outer = float(rng.uniform(20.0, 23.5))
         r_outer_grid, theta_out = _elliptical_grid(
@@ -276,7 +277,7 @@ def generate_synthetic_dataset(
     Args:
         output_dir: Directory where .fits files will be written.
         samples_per_class: Number of frames to generate per morphological class.
-        seed: Random seed ensuring bit-exact reproducibility.
+        seed: Random seed; verify generated file hashes in the target software environment.
         config: Optional detector/optics configuration.
 
     Returns:
